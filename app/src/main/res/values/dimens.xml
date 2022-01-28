@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="create_challenge_input_fields_margin">@dimen/_8sdp</dimen>
+    <dimen name="create_tournament_input_fields_margin">@dimen/_8sdp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+</resources>

@@ -1,0 +1,73 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/tree_background"
+        android:scaleType="centerCrop"
+        android:id="@+id/imageView"
+        android:tint="#aaffffff"/>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:backgroundTint="@color/colorPrimary">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:title="Challenges"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:backgroundTint="@color/colorPrimary"
+            app:navigationIcon="?homeAsUpIndicator">
+
+            <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/challenges"
+                android:fontFamily="@font/montserrat_extra_bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sdp"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
+            app:tabSelectedTextColor="@color/white"
+            app:tabIndicatorColor="@color/white"
+            app:tabIndicatorHeight="@dimen/_2sdp"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabCreateChallenge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/_16sdp"
+        android:backgroundTint="@color/colorPrimary"
+        app:icon="@drawable/ic_add"
+        app:iconTint="@color/white"
+        android:textColor="@color/white"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

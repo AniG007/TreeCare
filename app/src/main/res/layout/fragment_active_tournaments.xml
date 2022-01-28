@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fui_transparent"
+    tools:context=".screens.tournaments.activetournaments.ActiveTournamentsFragment"
+    >
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="@string/empty_active_tournaments"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/tournament_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textCursorDrawable="@null"
+        app:queryHint="@string/Search"
+        android:elevation="@dimen/_8sdp"
+        android:theme="@style/SearchBarStyle"
+        app:iconifiedByDefault="false"
+        app:searchIcon="@drawable/ic_baseline_search_24"
+        android:background="@color/tournament_mode_primary_color"
+        app:layout_constraintBottom_toTopOf="@id/recyclerView"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/recyclerView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:clipToPadding="false"-->
+<!--        android:paddingTop="@dimen/_32sdp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tournament_search"-->
+<!--        />-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_48sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tournament_search" />
+</androidx.constraintlayout.widget.ConstraintLayout>

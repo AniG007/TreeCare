@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.createchallenge.CreateChallengeFragment"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:title="New Challenge"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:navigationIcon="?homeAsUpIndicator" >
+
+            <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/New_Challenge"
+                android:fontFamily="@font/montserrat_extra_bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sdp" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_16sdp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/teamNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Challenge name"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputTeamName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/teamDescriptionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/challenge_description"
+                android:layout_marginTop="@dimen/create_challenge_input_fields_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/teamNameLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputTeamDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minLines="4"
+                    android:scrollHorizontally="false"
+                    android:scrollbars="vertical"
+                    android:gravity="top|start"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/challengeGoalLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/create_challenge_input_fields_margin"
+                android:hint="Minimum Goal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintTop_toBottomOf="@+id/teamDescriptionLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputChallengeGoal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/challengeEndDateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="End date"
+                android:layout_marginTop="@dimen/create_challenge_input_fields_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintTop_toBottomOf="@+id/challengeGoalLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputChallengeEndDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/createChallengeButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:text="@string/create"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/challengeEndDateLayout"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>

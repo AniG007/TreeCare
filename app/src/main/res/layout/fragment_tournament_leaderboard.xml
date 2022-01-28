@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.tournamentleaderboard.TournamentLeaderBoardFragment"
+    android:theme="@style/tournament_mode_theme"
+    android:name="androidx.navigation.fragment.NavHostFragment">
+
+    <include
+        layout="@layout/layout_leaf_background" />
+
+    <!--<androidx.appcompat.widget.Toolbar
+        android:id="@+id/titleToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/green_linear_gradient"
+        android:backgroundTint="@color/tournament_mode_primary_color"
+        android:paddingBottom="@dimen/_15sdp"
+        android:elevation="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/recyclerView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <dal.mitacsgri.treecare.utils.ui.AutoScrollingTextView
+                android:id="@+id/headingTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="start"
+                android:text="@string/leaderboard_tournament_name"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_30sdp"
+                android:fontFamily="@font/montserrat_extra_bold" />
+
+            <TextView
+                android:id="@+id/subheadingTV"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:gravity="start"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                android:text="@string/leaderboard"
+                android:fontFamily="@font/montserrat_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/headingTV" />
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+-->
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/titleToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/backButton"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:background="@drawable/ic_back_arrow"
+                    app:layout_constraintTop_toTopOf="@id/titleTV"
+                    app:layout_constraintStart_toStartOf="@id/titleTV"
+                    app:layout_constraintBottom_toBottomOf="@id/titleTV"/>
+
+                <dal.mitacsgri.treecare.utils.ui.AutoScrollingTextView
+                    android:id="@+id/headingTV"
+                    style="@style/TextAppearance.AppCompat.Headline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:text="@string/leaderboard_tournament_name"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:overScrollMode="never"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleToolbar" />
+
+    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_2sdp"
+        app:srcCompat="@drawable/ic_back_big"
+        app:tint="@color/white"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/_12sdp" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

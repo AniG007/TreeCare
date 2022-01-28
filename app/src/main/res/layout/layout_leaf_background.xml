@@ -1,0 +1,10 @@
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@drawable/leaf_pattern"
+    android:scaleType="centerCrop"
+    android:id="@+id/imageView"
+    android:tint="#ddffffff"
+    android:layout_marginStart="-20dp"
+    android:layout_marginEnd="-20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"/>

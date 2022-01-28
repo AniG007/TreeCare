@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.gamesettings.SettingsActivity">
+
+    <include
+        android:id="@+id/backgroundLayout"
+        layout="@layout/layout_leaf_background" />
+
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+        android:fontFamily="@font/montserrat_extra_bold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_24sdp"
+        android:background="@drawable/green_linear_gradient"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingStart="@dimen/_36sdp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:src="@drawable/ic_back_arrow"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="@id/titleTV"
+        app:layout_constraintStart_toStartOf="@id/titleTV"
+        app:layout_constraintBottom_toBottomOf="@id/titleTV"/>
+
+    <ImageView
+        android:id="@+id/iconVolume"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:src="@drawable/ic_volume"
+        android:tint="@color/colorPrimaryDark"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/volumeChangeTV"
+        app:layout_constraintTop_toTopOf="@id/volumeChangeTV"
+        app:layout_constraintBottom_toBottomOf="@id/volumeChangeTV"/>
+
+    <TextView
+        android:id="@+id/volumeChangeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/volume"
+        android:textSize="@dimen/_20sdp"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/iconVolume"
+        app:layout_constraintTop_toBottomOf="@id/titleTV"/>
+
+    <TextView
+        android:id="@+id/volumeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_40sdp"
+        tools:text="10"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_extra_bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/volumeChangeTV"
+        app:layout_constraintTop_toTopOf="@id/volumeChangeTV"
+        app:layout_constraintStart_toStartOf="@id/guideline1"/>
+
+    <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+        android:id="@+id/seekBarVolume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        app:dsb_min="0"
+        app:dsb_max="10"
+        app:dsb_progressColor="@color/colorPrimaryDark"
+        app:dsb_trackColor="@color/black"
+        app:dsb_indicatorColor="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@id/volumeChangeTV"/>
+
+    <ImageView
+        android:id="@+id/iconGoal"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:tint="@color/colorPrimaryDark"
+        android:src="@drawable/ic_goal"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/dailyGoalChangeTV"
+        app:layout_constraintBottom_toBottomOf="@id/dailyGoalChangeTV"/>
+
+    <TextView
+        android:id="@+id/dailyGoalChangeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/daily_goal"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@id/seekBarVolume"
+        app:layout_constraintStart_toEndOf="@id/iconGoal"/>
+
+    <TextView
+        android:id="@+id/dailyGoalTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="10000"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_extra_bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/dailyGoalChangeTV"
+        app:layout_constraintTop_toTopOf="@id/dailyGoalChangeTV"
+        app:layout_constraintStart_toEndOf="@id/guideline1"/>
+
+    <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+        android:id="@+id/seekBarGoal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        app:dsb_min="5"
+        app:dsb_max="30"
+        app:dsb_progressColor="@color/colorPrimaryDark"
+        app:dsb_trackColor="@color/black"
+        app:dsb_indicatorColor="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@id/dailyGoalChangeTV"/>
+
+    <TextView
+        android:id="@+id/dailyGoalChangeInfoTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/daily_goal_changes_are_applicable_from_the_next_day"
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@color/black"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/seekBarGoal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/save"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.62" />
+</androidx.constraintlayout.widget.ConstraintLayout>

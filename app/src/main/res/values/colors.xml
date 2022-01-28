@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#53C710</color>
+    <color name="colorPrimaryDark">#398610</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorPrimaryTransparent">#aa53c710</color>
+    <color name="colorPrimaryDarkTransparent">#aa398610</color>
+    <color name="colorPrimaryLight">#96E46B</color>
+
+    <color name="green">#00ff00</color>
+    <color name="darkreen">@color/colorPrimaryDark</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="gray">#646464</color>
+    <color name="transparent">#00000000</color>
+    <color name="black_transparent">#aa000000</color>
+
+    <color name="challenger_mode_primary_color">#FFFF6F00</color>
+    <color name="challenger_mode_accent_color">#c43e00</color>
+    <color name="challenger_mode_primary_color_light">#FF9E50</color>
+
+    <color name="tournament_mode_primary_color">#9C27B0</color>
+    <color name="tournament_mode_accent_color">#650D74</color>
+
+    <color name="captain_primary_color">#e68a00</color>
+
+</resources>

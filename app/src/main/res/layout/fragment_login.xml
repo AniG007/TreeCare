@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.login.LoginFragment">
+
+    <include
+        layout="@layout/layout_leaf_background" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/green_linear_gradient"
+        android:elevation="@dimen/_6sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_extra_bold"
+            android:textSize="@dimen/_24sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_8sdp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/walkAnimation"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:lottie_fileName="walk.json"
+        app:lottie_loop="true"
+        app:lottie_speed="0.7"
+        app:lottie_autoPlay="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        tools:src="@drawable/app_icon_login"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_screen_quote"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:fontFamily="@font/montserrat_regular"
+        app:layout_constraintTop_toBottomOf="@+id/walkAnimation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/login_screen_text"
+        android:id="@+id/textView2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_text"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="normal"
+        style="@style/login_screen_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:id="@+id/textView3"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signInButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_in_with_google"
+        android:textColor="@color/black"
+        android:padding="@dimen/_6sdp"
+        app:icon="@drawable/ic_google"
+        app:iconTint="@null"
+        app:iconPadding="@dimen/_4sdp"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="@dimen/_4sdp"
+        app:elevation="@dimen/_4sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.29000002"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

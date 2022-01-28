@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/layout_background_image"
+        android:id="@+id/imageView"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="-56dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/instructions"
+        android:textAllCaps="true"
+        android:textSize="@dimen/_32sdp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/black"
+        android:paddingTop="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        android:id="@+id/textView4"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/starter_mode"
+        android:textSize="@dimen/_24sdp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        android:id="@+id/modeNameTV"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/mode_selection_button_background"
+        android:layout_margin="@dimen/_10sdp"
+        android:padding="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/modeNameTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/continueButton">
+
+        <TextView
+            android:id="@+id/instructionsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/starter_mode_instructions"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/black"/>
+    </ScrollView>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent=".76"
+        android:id="@+id/continueButton"
+        android:text="@string/continueToGame"
+        android:textSize="@dimen/_20sdp"
+        style="@style/ModeSelectionButtonStyle"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

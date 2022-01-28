@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".screens.tournamentleaderboard.TournamentLeaderBoardFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/trophyAnimation"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_scale="1.4"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_fileName="celebration.json" />
+
+        <ImageView
+            android:id="@+id/trophyImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            tools:src="@drawable/ic_trophy_first"
+            android:padding="@dimen/_60sdp"
+            app:layout_constraintStart_toStartOf="@id/trophyAnimation"
+            app:layout_constraintEnd_toEndOf="@id/trophyAnimation"
+            app:layout_constraintTop_toTopOf="@id/trophyAnimation"
+            app:layout_constraintBottom_toBottomOf="@id/trophyAnimation"/>
+
+        <TextView
+            android:id="@+id/tournamentCompleteTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/tournament_ended"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_24sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/trophyAnimation" />
+
+        <TextView
+            android:id="@+id/positionTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tournamentCompleteTV"
+            tools:text="Your team's position is #1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

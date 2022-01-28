@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    app:cardElevation="@dimen/_4sdp"
+    android:backgroundTint="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:id="@+id/enrollteamCard">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_8sdp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:padding="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:foregroundGravity="center"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <dal.mitacsgri.treecare.utils.ui.AutoScrollingTextView
+            android:id="@+id/nameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="25dp"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="@string/user"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.016"
+            app:layout_constraintStart_toEndOf="@id/imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--<ImageView
+            android:id="@+id/stepsImage"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:src="@drawable/ic_steps"
+            android:tint="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@id/stepCountTV"
+            app:layout_constraintEnd_toStartOf="@id/stepCountTV"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/imageView"
+            app:layout_constraintTop_toTopOf="@id/stepCountTV" />
+
+        <TextView
+            android:id="@+id/stepCountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/stepsImage"
+            tools:text="Total steps: 5000" />
+
+        <ImageView
+            android:id="@+id/leavesImage"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:src="@drawable/ic_leaf"
+            android:tint="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@id/leavesCountTV"
+            app:layout_constraintEnd_toStartOf="@id/leavesCountTV"
+            app:layout_constraintStart_toEndOf="@id/stepCountTV"
+            app:layout_constraintTop_toTopOf="@id/leavesCountTV" />
+
+        <TextView
+            android:id="@+id/leavesCountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/stepCountTV"
+            app:layout_constraintStart_toEndOf="@id/leavesImage"
+            app:layout_constraintTop_toTopOf="@id/stepCountTV"
+            tools:text="Leaves" />
+-->
+        <CheckBox
+            android:id="@+id/checkbox_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCheckboxClicked"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

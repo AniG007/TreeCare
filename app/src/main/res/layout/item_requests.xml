@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    android:layout_marginStart="@dimen/_15sdp"
+    android:layout_marginEnd="@dimen/_15sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    app:cardElevation="@dimen/_4sdp"
+    app:cardCornerRadius="@dimen/_4sdp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/fui_transparent"
+        android:padding="@dimen/_4sdp">
+
+        <TextView
+            android:id="@+id/rankTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imageView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="1" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:padding="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/textHolder"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/rankTV"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <dal.mitacsgri.treecare.utils.ui.AutoScrollingTextView
+            android:id="@+id/captainName"
+            android:layout_width="261dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="88dp"
+            android:layout_marginTop="8dp"
+            android:paddingTop="@dimen/_10sdp"
+            android:text="Player"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textHolder"
+            android:layout_width="261dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="32dp"
+            android:paddingTop="@dimen/_10sdp"
+            android:text=" wants to join your team:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/teamName"
+            android:layout_width="261dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="28dp"
+            android:paddingTop="@dimen/_10sdp"
+            android:text=" Teamname"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintStart_toStartOf="@id/textHolder"
+            app:layout_constraintTop_toTopOf="@id/textHolder" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/AcceptButton"
+            android:layout_width="89dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="88dp"
+            android:text="Accept"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textHolder" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/DeclineButton"
+            android:layout_width="89dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="200dp"
+            android:backgroundTint="#f00"
+            android:text="Decline"
+            android:textAllCaps="false"
+            app:layout_constraintLeft_toRightOf="@id/AcceptButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textHolder" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

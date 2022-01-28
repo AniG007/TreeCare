@@ -1,0 +1,48 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="512dp"
+    android:height="512dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+  <path
+      android:pathData="m151,30h45v30h-45z"
+      android:fillColor="#fabe2c"/>
+  <path
+      android:pathData="m316,30h45v30h-45z"
+      android:fillColor="#ff9100"/>
+  <path
+      android:pathData="m256,0h-75v106c0,27.656 15.132,53.969 39.492,67.064 12.466,6.724 20.508,21.534 20.508,37.735v46.201h15,15v-46.201c0,-16.201 8.042,-31.011 20.493,-37.72 24.375,-13.11 39.507,-39.423 39.507,-67.079v-106z"
+      android:fillColor="#fabe2c"/>
+  <path
+      android:pathData="m271,210.799c0,-16.201 8.042,-31.011 20.493,-37.72 24.375,-13.11 39.507,-39.423 39.507,-67.079v-106h-75v257h15z"
+      android:fillColor="#ff9100"/>
+  <path
+      android:pathData="m256,302h-166v75h30v-45h136,136v45h30v-75z"
+      android:fillColor="#474f54"/>
+  <path
+      android:pathData="m392,377h30v-75h-166v30h136z"
+      android:fillColor="#32393f"/>
+  <path
+      android:pathData="m256,242h-45v30h45,45v-30z"
+      android:fillColor="#fabe2c"/>
+  <path
+      android:pathData="m256,242h45v30h-45z"
+      android:fillColor="#ff9100"/>
+  <path
+      android:pathData="m180,437h-30v-45h-90v45h-30v-75h150z"
+      android:fillColor="#474f54"/>
+  <path
+      android:pathData="m482,437h-30v-45h-90v45h-30v-75h150z"
+      android:fillColor="#32393f"/>
+  <path
+      android:pathData="m347,512c-24.814,0 -45,-20.186 -45,-45s20.186,-45 45,-45 45,20.186 45,45 -20.186,45 -45,45z"
+      android:fillColor="#ff641a"/>
+  <path
+      android:pathData="m467,512c-24.814,0 -45,-20.186 -45,-45s20.186,-45 45,-45 45,20.186 45,45 -20.186,45 -45,45z"
+      android:fillColor="#ff641a"/>
+  <path
+      android:pathData="m45,512c-24.814,0 -45,-20.186 -45,-45s20.186,-45 45,-45 45,20.186 45,45 -20.186,45 -45,45z"
+      android:fillColor="#fabe2c"/>
+  <path
+      android:pathData="m165,512c-24.814,0 -45,-20.186 -45,-45s20.186,-45 45,-45 45,20.186 45,45 -20.186,45 -45,45z"
+      android:fillColor="#fabe2c"/>
+</vector>

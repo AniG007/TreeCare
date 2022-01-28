@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="@dimen/_16sdp"
+    android:layout_marginEnd="@dimen/_16sdp"
+    android:layout_marginBottom="@dimen/_16sdp"
+    app:cardElevation="@dimen/_6sdp"
+    app:cardCornerRadius="@dimen/_6sdp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:id="@+id/myTournamentCard">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_10sdp">
+
+        <dal.mitacsgri.treecare.utils.ui.AutoScrollingTextView
+            android:id="@+id/nameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/buttonEdit"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="15,000 in 2 days" />
+
+        <TextView
+            android:id="@+id/goalTV"
+            style="@style/ItemActiveChallengeTextWithDrawableStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_goal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameTV"
+            tools:text="Total steps goal: 15000" />
+
+        <TextView
+            android:id="@+id/durationTV"
+            style="@style/ItemActiveChallengeTextWithDrawableStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_time"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/currentStartDate"
+            tools:text="Expires: Some date" />
+
+        <TextView
+            android:id="@+id/currentStartDate"
+            style="@style/ItemActiveChallengeTextWithDrawableStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_time"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/goalTV"
+            tools:text="Expires: Some date" />
+
+
+        <TextView
+            android:id="@+id/teamCountTV"
+            style="@style/ItemActiveChallengeTextWithDrawableStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_teams"
+            android:text="2000"
+            app:layout_constraintBottom_toTopOf="@+id/buttonExit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/goalTV" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonTree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Tree"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/durationTV" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonLeaderBoard"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/leaderboard"
+            app:layout_constraintStart_toEndOf="@+id/buttonTree"
+            app:layout_constraintTop_toBottomOf="@+id/durationTV"
+            />
+
+        <ImageButton
+            android:id="@+id/buttonDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#f00"
+            android:src="@drawable/ic_delete"
+            android:tint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/durationTV" />
+
+        <ImageButton
+            android:id="@+id/buttonEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black_transparent"
+            android:src="@drawable/ic_edit"
+            android:tint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
+    <!--<TextView-->
+    <!--android:id="@+id/team1CountTV"-->
+    <!--style="@style/ItemActiveChallengeTextWithDrawableStyle"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="12dp"-->
+    <!--android:drawableStart="@drawable/ic_user1"-->
+    <!--android:text="2000"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/goalTV" />-->

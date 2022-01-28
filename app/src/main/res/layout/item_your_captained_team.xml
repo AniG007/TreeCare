@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    app:cardElevation="@dimen/_4sdp"
+    android:backgroundTint="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:id="@+id/teamCard">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_8sdp">
+
+        <dal.mitacsgri.treecare.utils.ui.AutoScrollingTextView
+            android:id="@+id/teamNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="Team"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/captainRank"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Your Rank"-->
+<!--            android:textColor="@color/tournament_mode_primary_color"-->
+<!--            android:textSize="@dimen/_12sdp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintLeft_toRightOf="@id/addButton"-->
+<!--            app:layout_constraintRight_toLeftOf="@id/buttonDelete"-->
+<!--            android:layout_marginBottom="@dimen/_10sdp"-->
+<!--            android:layout_marginEnd="@dimen/_72sdp"/>-->
+
+        <TextView
+            android:id="@+id/playerRank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:text="MEMBERS"
+            android:textColor="@color/tournament_mode_primary_color"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/teamNameTV" />
+
+
+        <TextView
+            android:id="@+id/membersCountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:drawableStart="@drawable/ic_user"
+            android:drawablePadding="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="Players: 4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/buttonDelete" />
+
+        <!--        <com.google.android.material.button.MaterialButton-->
+        <!--            android:id="@+id/viewButton"-->
+        <!--            android:layout_width="118dp"-->
+        <!--            android:layout_height="38dp"-->
+        <!--            android:layout_marginStart="108dp"-->
+        <!--            android:layout_marginTop="8dp"-->
+        <!--            android:backgroundTint="@color/colorPrimaryDarkTransparent"-->
+        <!--            android:text="@string/view_team"-->
+        <!--            android:textAllCaps="false"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+        <ImageButton
+            android:id="@+id/buttonDelete"
+            android:layout_width="44dp"
+            android:layout_height="43dp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:backgroundTint="#f00"
+            android:src="@drawable/ic_delete"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageButton
+            android:id="@+id/buttonExit"
+            android:layout_width="44dp"
+            android:layout_height="43dp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:backgroundTint="#f00"
+            android:src="@drawable/ic_exit"
+            android:tint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:backgroundTint="@color/tournament_mode_primary_color"
+            android:text="@string/invite_players1"
+            android:textAllCaps="false"
+            android:tint="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/teamNameTV" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
+    <!--app:layout_constraintBottom_toBottomOf="@+id/buttonDelete"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/buttonDelete"-->
+
+    <!--android:src="@drawable/ic_add"-->
+
+    <!--app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"-->
+
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+
+<!--    app:layout_constraintLeft_toRightOf="@id/addButton"-->
+
+<!--    app:layout_constraintLeft_toRightOf="@id/addButton"-->
+
+<!--    app:layout_constraintStart_toStartOf="@id/addButton"-->
+
+<!--    app:layout_constraintStart_toStartOf="parent"-->

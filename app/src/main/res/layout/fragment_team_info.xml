@@ -1,0 +1,137 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.teaminfo.TeamInfoFragment">
+
+    <include
+        layout="@layout/layout_background_image" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:navigationIcon="?homeAsUpIndicator" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/teams"
+                    android:textColor="@color/white"
+                    style="@style/TextAppearance.AppCompat.Headline" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_4sdp"
+                    android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/transferCaptaincy"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_transfer_captaincy"
+                    android:scaleType="centerCrop"
+                    android:padding="@dimen/_4sdp"
+                    android:tint="@color/white"
+                    android:contentDescription="@string/member_requests"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_43sdp"
+        android:id="@+id/header"
+        android:theme="@style/tournament_mode_theme">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+<!--            <com.google.android.material.button.MaterialButton-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:text="Rank"-->
+<!--                android:textAlignment="textStart"-->
+<!--                android:clickable="false"-->
+<!--                style="@style/Widget.AppCompat.Button.Borderless"/>-->
+
+<!--            <com.google.android.material.button.MaterialButton-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:clickable="false"-->
+<!--                android:layout_marginStart="@dimen/_16sdp"-->
+<!--                android:text="Players"-->
+<!--                style="@style/Widget.AppCompat.Button.Borderless"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/rankHeader"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Rank"-->
+<!--            android:layout_marginStart="@dimen/_16sdp"-->
+<!--            android:textColor="@color/white"-->
+<!--            style="@style/TextAppearance.AppCompat.Headline" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/NameHeader"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Players"-->
+<!--                android:enabled="false"-->
+<!--                android:layout_marginStart="@dimen/_56sdp"-->
+<!--                android:textColor="@color/white"-->
+<!--                style="@style/TextAppearance.AppCompat.Headline" />-->
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fui_transparent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="64dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

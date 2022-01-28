@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    android:layout_marginStart="@dimen/_15sdp"
+    android:layout_marginEnd="@dimen/_15sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    app:cardElevation="@dimen/_4sdp"
+    app:cardCornerRadius="@dimen/_4sdp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/fui_transparent"
+        android:padding="@dimen/_4sdp">
+
+        <TextView
+            android:id="@+id/rankTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imageView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="1" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:padding="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/nameTV"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/rankTV"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/nameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/stepsCountTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread"
+            tools:text="User Name" />
+
+        <ImageView
+            android:id="@+id/stepsImage"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:src="@drawable/ic_steps"
+            android:tint="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@id/stepsCountTV"
+            app:layout_constraintEnd_toStartOf="@id/stepsCountTV"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/imageView"
+            app:layout_constraintTop_toTopOf="@id/stepsCountTV" />
+
+        <dal.mitacsgri.treecare.utils.ui.AutoScrollingTextView
+            android:id="@+id/stepsCountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/_4sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/stepsImage"
+            app:layout_constraintTop_toBottomOf="@+id/nameTV"
+            tools:text="Total steps: 5000" />
+
+        <ImageView
+            android:id="@+id/leafImage"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:src="@drawable/ic_leaf"
+            android:tint="@color/colorPrimary"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@id/leafCountTV"
+            app:layout_constraintEnd_toStartOf="@id/leafCountTV"
+            app:layout_constraintTop_toTopOf="@id/leafCountTV"
+            app:layout_constraintStart_toEndOf="@id/stepsCountTV"/>
+
+        <dal.mitacsgri.treecare.utils.ui.AutoScrollingTextView
+            android:id="@+id/leafCountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/stepsCountTV"
+            app:layout_constraintStart_toEndOf="@id/leafImage"
+            app:layout_constraintTop_toTopOf="@id/stepsCountTV"
+            tools:text="L" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

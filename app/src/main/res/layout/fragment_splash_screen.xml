@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/splash_screen_background"
+    tools:context=".screens.splash.SplashScreenFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/leaf_pattern"
+        android:scaleType="centerCrop"
+        android:foreground="@drawable/splash_screen_background"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/splashScreenAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:lottie_fileName="tree.json"
+        app:lottie_loop="false"
+        app:lottie_autoPlay="true"
+        app:lottie_speed="0.25"
+        android:layout_marginTop="@dimen/_20sdp"
+        tools:src="@drawable/splash_tree"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_60sdp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:id="@+id/textView"
+        android:fontFamily="@font/pinewood"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/splashScreenAnimation"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

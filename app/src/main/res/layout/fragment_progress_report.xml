@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.progressreport.ProgressReportFragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/green_linear_gradient"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tabLayout"/>
+
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/progress_report"
+        android:gravity="start"
+        android:paddingStart="@dimen/_10sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20sdp"
+        android:fontFamily="@font/montserrat_extra_bold"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/backButton"/>
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:src="@drawable/ic_back_arrow"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/titleTV"
+        app:layout_constraintTop_toTopOf="@id/titleTV"
+        app:layout_constraintBottom_toBottomOf="@id/titleTV"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        app:tabSelectedTextColor="@color/white"
+        app:tabIndicatorColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/titleTV" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout" >
+    </androidx.viewpager2.widget.ViewPager2>
+</androidx.constraintlayout.widget.ConstraintLayout>

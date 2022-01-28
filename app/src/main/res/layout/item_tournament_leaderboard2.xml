@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    android:layout_marginStart="@dimen/_15sdp"
+    android:layout_marginEnd="@dimen/_15sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    app:cardElevation="@dimen/_4sdp"
+    app:cardCornerRadius="@dimen/_4sdp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView2"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/fui_transparent"
+        android:padding="@dimen/_4sdp">
+
+        <TextView
+            android:id="@+id/rankTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imageView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:padding="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/LLayout"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/rankTV"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <LinearLayout
+            android:id="@+id/LLayout"
+            android:layout_width="256dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/imageView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread">
+
+            <dal.mitacsgri.treecare.utils.ui.AutoScrollingTextView
+                android:id="@+id/teamNameTV"
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:fadingEdge="horizontal"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="bold"
+                tools:text="Team Name" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/capNameHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Captain: "
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/LLayout"
+            app:layout_constraintStart_toEndOf="@id/imageView"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        <dal.mitacsgri.treecare.utils.ui.AutoScrollingTextView
+            android:id="@+id/captainNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/capNameHolder"
+            app:layout_constraintTop_toBottomOf="@+id/LLayout"
+            tools:text="CaptainName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
+    <!--    app:layout_constraintBottom_toTopOf="@+id/stepsCountTV"-->
+    <!--    app:layout_constraintEnd_toEndOf="parent"-->
+    <!--    app:layout_constraintHorizontal_bias="0.5"-->
+    <!--    app:layout_constraintStart_toEndOf="@+id/imageView"-->
+    <!--    app:layout_constraintTop_toTopOf="parent"-->
+    <!--    app:layout_constraintVertical_chainStyle="spread"-->
